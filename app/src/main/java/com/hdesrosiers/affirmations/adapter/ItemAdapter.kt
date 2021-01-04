@@ -10,6 +10,16 @@ import com.hdesrosiers.affirmations.R
 import com.hdesrosiers.affirmations.model.Affirmation
 
 /**
+To implement the adapter:
+
+* Create a new class for the adapter, for example, ItemAdapter.
+* Create a custom ViewHolder class that represents a single list item view. Extend from RecyclerView.ViewHolder class.
+* Modify the ItemAdapter class to extend from the RecyclerView.Adapter class with the custom ViewHolder class.
+* Implement these methods within the adapter: getItemsCount(), onCreateViewHolder(), and onBindViewHolder().
+ */
+
+
+/**
  * Adapter for the [RecyclerView] in [MainActivity]. Displays [Affirmation] data object.
  */
 
