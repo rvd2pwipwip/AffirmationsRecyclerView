@@ -1,8 +1,10 @@
 package com.hdesrosiers.affirmations
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hdesrosiers.affirmations.adapter.ItemAdapter
 import com.hdesrosiers.affirmations.data.Datasource
@@ -26,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 //      3. To tell the recyclerView to use the ItemAdapter class you created, create a new ItemAdapter instance.
 //         ItemAdapter expects two parameters: the affirmations in myDataset and the context (this) of this activity.
 //      4. Assign the ItemAdapter object to the adapter property of the recyclerView.
+//        recyclerView.layoutManager = GridLayoutManager(this, 3)
         recyclerView.adapter = ItemAdapter(myDataset, this)
 
         // Use this setting to improve performance if you know that changes

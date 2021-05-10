@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hdesrosiers.affirmations.R
@@ -43,6 +44,7 @@ class ItemAdapter(
     inner class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
 //    4. Inside ItemViewHolder, define a val property textView that is of type TextView.
 //       Assign it the view with the ID item_title that you defined in list_item.xml.
+        val imageView: ImageView = view.findViewById(R.id.item_image)
         val textView: TextView = view.findViewById(R.id.item_title)
     }
 
@@ -64,6 +66,7 @@ class ItemAdapter(
         val item = dataset[position] // Affirmation instance
 //      2. With an Affirmation object instance, you can find the corresponding string resource ID by calling item.stringResourceId.
         holder.textView.text = context.resources.getString(item.stringResourceId)
+        holder.imageView.setImageResource(item.imageResourceId)
     }
 
     /**
